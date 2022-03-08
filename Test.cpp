@@ -99,7 +99,7 @@ TEST_CASE("Good input")
 }
 TEST_CASE("Incorrect answer") 
 {
-    CHECK_THROWS(nospaces(mat(19, 19, '#', '*')) == nospaces(   "###################\n" //19
+    CHECK(nospaces(mat(19, 19, '#', '*')) != nospaces(   "###################\n" //19
                                                                 "#*****************#\n"
                                                                 "#*###############*#\n"
                                                                 "#*#*************#*#\n"
@@ -119,5 +119,5 @@ TEST_CASE("Incorrect answer")
                                                                 "#*****************#\n"
                                                                 "###################"));
 
-    CHECK_THROWS(nospaces(mat(1, 1, '$', '%')) == nospaces("%"));//20-should print $ 
+    CHECK(nospaces(mat(1, 1, '$', '%')) != nospaces("%"));//20-should print $ 
 }
