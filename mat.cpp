@@ -3,10 +3,8 @@
 #include <string>
 
 
-namespace ariel 
-{
-    string mat (int cal, int row, char s1, char s2)
-    {
+using namespace ariel; 
+
+string ariel::mat (int cal, int row, char s1, char s2){
         return "My mat is";
-    }
 }

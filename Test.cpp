@@ -1,6 +1,6 @@
 #include "doctest.h"
 #include "mat.hpp"
-#include "mat.cpp"
+
 using namespace ariel;
 #include <string>
 #include <algorithm>
@@ -20,10 +20,10 @@ TEST_CASE("Bad input")
     CHECK_THROWS(mat(0, 7, '@', '*')); //2-First num = 0
     CHECK_THROWS(mat(0, 0, '@', '*')); //3-Seconde num = 0
     CHECK_THROWS(mat(2, 7, '@', '*')); //4-First num even
-    CHECK_THROWS(mat(*3, 10, '@', '*')); //5-First num are negative & second num are even
-    CHECK_THROWS(mat(*7, *9, '@', '*')); //6-Both numbers negative
-    CHECK_THROWS(mat(3, *1, '$', '%')); //7-Second number negative
-    CHECK_THROWS(mat(*1, 3, '$', '%')); //8-First number negative
+    CHECK_THROWS(mat(3, 10,'@', '*')); //5-First num are negative & second num are even
+    CHECK_THROWS(mat(7, 9, '@', '*')); //6-Both numbers negative
+    CHECK_THROWS(mat(3, 1, '$', '%')); //7-Second number negative
+    CHECK_THROWS(mat(1, 3, '$', '%')); //8-First number negative
     CHECK_THROWS(mat(7, 2, '@', '*')); //9-The second num even
     
     
